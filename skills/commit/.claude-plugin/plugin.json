@@ -1,6 +1,6 @@
 {
   "name": "commit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Suggest conventional commit messages based on actual git diff analysis",
   "author": {
     "name": "Christopher Goltz",

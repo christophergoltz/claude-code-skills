@@ -8,7 +8,7 @@ description: >
   "commit suggestions", "prepare commit", "what changed", "what should I commit",
   or asks about what changed or what to commit.
 argument-hint: "[optional: ticket ID for scope context]"
-allowed-tools: Bash(git status*, git diff*, git log*), Read, Glob, Grep
+allowed-tools: Bash(cd *, git status*, git diff*, git log*, echo *), Read, Glob, Grep
 ---
 
 # Commit Skill
