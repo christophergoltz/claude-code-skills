@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "claude-code-skills",
-      "source": ".",
+      "source": "./",
       "description": "10 reusable Claude Code skills for software engineering workflows",
       "version": "1.0.0"
     }
