@@ -1,0 +1,11 @@
+{
+  "name": "investigate",
+  "version": "1.0.0",
+  "description": "Investigate issues in staging or local environments using Grafana (Prometheus + Loki)",
+  "author": {
+    "name": "Christopher Goltz",
+    "url": "https://github.com/christophergoltz"
+  },
+  "repository": "https://github.com/christophergoltz/claude-code-skills",
+  "license": "Apache-2.0"
+}

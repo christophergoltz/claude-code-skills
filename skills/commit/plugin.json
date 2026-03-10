@@ -1,0 +1,11 @@
+{
+  "name": "commit",
+  "version": "1.0.0",
+  "description": "Suggest conventional commit messages based on actual git diff analysis",
+  "author": {
+    "name": "Christopher Goltz",
+    "url": "https://github.com/christophergoltz"
+  },
+  "repository": "https://github.com/christophergoltz/claude-code-skills",
+  "license": "Apache-2.0"
+}

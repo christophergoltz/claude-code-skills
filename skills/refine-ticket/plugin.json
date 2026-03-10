@@ -1,0 +1,11 @@
+{
+  "name": "refine-ticket",
+  "version": "1.0.0",
+  "description": "Refine planning tickets to implementation-ready detail with data models, mockups, and validation rules",
+  "author": {
+    "name": "Christopher Goltz",
+    "url": "https://github.com/christophergoltz"
+  },
+  "repository": "https://github.com/christophergoltz/claude-code-skills",
+  "license": "Apache-2.0"
+}

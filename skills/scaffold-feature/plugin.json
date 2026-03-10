@@ -1,0 +1,11 @@
+{
+  "name": "scaffold-feature",
+  "version": "1.0.0",
+  "description": "Generate a complete new feature from scratch by scaffolding all boilerplate files following established patterns",
+  "author": {
+    "name": "Christopher Goltz",
+    "url": "https://github.com/christophergoltz"
+  },
+  "repository": "https://github.com/christophergoltz/claude-code-skills",
+  "license": "Apache-2.0"
+}

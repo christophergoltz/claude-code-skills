@@ -1,0 +1,11 @@
+{
+  "name": "project-status",
+  "version": "1.0.0",
+  "description": "Show current project status from planning files with milestone progress and open tickets",
+  "author": {
+    "name": "Christopher Goltz",
+    "url": "https://github.com/christophergoltz"
+  },
+  "repository": "https://github.com/christophergoltz/claude-code-skills",
+  "license": "Apache-2.0"
+}

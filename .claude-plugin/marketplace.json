@@ -6,9 +6,63 @@
   },
   "plugins": [
     {
-      "name": "claude-code-skills",
-      "source": "./",
-      "description": "10 reusable Claude Code skills for software engineering workflows",
+      "name": "code-review",
+      "source": "./skills/code-review",
+      "description": "Review code changes against SOLID, Clean Code, DRY, KISS, YAGNI, project patterns, security, and performance",
+      "version": "1.0.0"
+    },
+    {
+      "name": "commit",
+      "source": "./skills/commit",
+      "description": "Suggest conventional commit messages based on actual git diff analysis",
+      "version": "1.0.0"
+    },
+    {
+      "name": "create-adr",
+      "source": "./skills/create-adr",
+      "description": "Create Architecture Decision Records (ADRs) for documenting important technical decisions",
+      "version": "1.0.0"
+    },
+    {
+      "name": "create-ticket",
+      "source": "./skills/create-ticket",
+      "description": "Create planning tickets (simple or epic) for feature requests, bugs, and enhancements",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ideate",
+      "source": "./skills/ideate",
+      "description": "Brainstorm and validate new feature ideas before they become tickets",
+      "version": "1.0.0"
+    },
+    {
+      "name": "implement",
+      "source": "./skills/implement",
+      "description": "Implement features, fix bugs, or debug issues following a structured 6-phase implementation model",
+      "version": "1.0.0"
+    },
+    {
+      "name": "investigate",
+      "source": "./skills/investigate",
+      "description": "Investigate issues in staging or local environments using Grafana (Prometheus + Loki)",
+      "version": "1.0.0"
+    },
+    {
+      "name": "project-status",
+      "source": "./skills/project-status",
+      "description": "Show current project status from planning files with milestone progress and open tickets",
+      "version": "1.0.0"
+    },
+    {
+      "name": "refine-ticket",
+      "source": "./skills/refine-ticket",
+      "description": "Refine planning tickets to implementation-ready detail with data models, mockups, and validation rules",
+      "version": "1.0.0"
+    },
+    {
+      "name": "scaffold-feature",
+      "source": "./skills/scaffold-feature",
+      "description": "Generate a complete new feature from scratch by scaffolding all boilerplate files following established patterns",
       "version": "1.0.0"
     }
   ]

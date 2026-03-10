@@ -1,0 +1,11 @@
+{
+  "name": "implement",
+  "version": "1.0.0",
+  "description": "Implement features, fix bugs, or debug issues following a structured 6-phase implementation model",
+  "author": {
+    "name": "Christopher Goltz",
+    "url": "https://github.com/christophergoltz"
+  },
+  "repository": "https://github.com/christophergoltz/claude-code-skills",
+  "license": "Apache-2.0"
+}

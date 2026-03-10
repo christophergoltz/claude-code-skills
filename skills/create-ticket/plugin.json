@@ -1,0 +1,11 @@
+{
+  "name": "create-ticket",
+  "version": "1.0.0",
+  "description": "Create planning tickets (simple or epic) for feature requests, bugs, and enhancements",
+  "author": {
+    "name": "Christopher Goltz",
+    "url": "https://github.com/christophergoltz"
+  },
+  "repository": "https://github.com/christophergoltz/claude-code-skills",
+  "license": "Apache-2.0"
+}

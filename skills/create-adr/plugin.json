@@ -1,0 +1,11 @@
+{
+  "name": "create-adr",
+  "version": "1.0.0",
+  "description": "Create Architecture Decision Records (ADRs) for documenting important technical decisions",
+  "author": {
+    "name": "Christopher Goltz",
+    "url": "https://github.com/christophergoltz"
+  },
+  "repository": "https://github.com/christophergoltz/claude-code-skills",
+  "license": "Apache-2.0"
+}

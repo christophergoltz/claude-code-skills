@@ -1,0 +1,11 @@
+{
+  "name": "code-review",
+  "version": "1.0.0",
+  "description": "Review code changes against SOLID, Clean Code, DRY, KISS, YAGNI, project patterns, security, and performance",
+  "author": {
+    "name": "Christopher Goltz",
+    "url": "https://github.com/christophergoltz"
+  },
+  "repository": "https://github.com/christophergoltz/claude-code-skills",
+  "license": "Apache-2.0"
+}
