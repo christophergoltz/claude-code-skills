@@ -127,29 +127,28 @@ parts of one feature (e.g. endpoint + service + validator for the same feature b
 
 ## Step 5: Present Output
 
+Output ONLY the formatted suggestion below — no analysis, no explanation of staging state,
+no commentary about why changes belong together. The commit message speaks for itself.
+
 ```
-Commit suggestions:
+--- repo-name ---
+feat(TICKET-123): add session notes CRUD endpoints
 
-repo-name:
-  feat(TICKET-123): add session notes CRUD endpoints
-
-other-repo:
-  chore(tickets): mark TICKET-123 as done
+--- other-repo ---
+chore(tickets): mark TICKET-123 as done
 ```
 
 If only one repo has changes, still use the same format.
 
-**Mixed staging state** — if a repo has both staged and unstaged changes, add a warning:
+**Mixed staging state** — if a repo has both staged and unstaged changes, append a short warning
+after the commit suggestion (this is the ONE exception where extra output is allowed):
 ```
-Warning: repo-name has mixed staged/unstaged changes
-   Staged:   path/to/file1.cs
-   Unstaged: path/to/file2.cs
-   → Should everything be committed, or only the staged files?
+⚠ repo-name has mixed staged/unstaged changes — commit staged only, or stage everything first?
 ```
 
-**No changes found:**
+**No changes found** — just say so, nothing more:
 ```
-No changes found in the repositories.
+No changes found.
 ```
 
 ## Rules
@@ -157,6 +156,7 @@ No changes found in the repositories.
 - NEVER run `git commit`, `git push`, or any write-mode git commands
 - NEVER guess changes — always read the actual diff first
 - NEVER combine multiple repos into one commit message
+- NEVER add commentary, analysis, or explanation around the output — the formatted suggestion is the entire response
 - ALWAYS base the message on the actual diff, not session memory alone
 - ALWAYS use English for commit messages
 - ALWAYS use imperative mood ("add", "fix", "update" — not "added", "fixes")
