@@ -365,14 +365,18 @@ Write a structured checkpoint file to `.claude/session-state.md` with the follow
    - App restart needed?
 4. **Testing hints**: What the user should manually test and what to look for
 
-#### Step 3: STOP — Wait for Feedback
+#### Step 3: STOP — Ask User
 
-End Phase 5 with:
+End Phase 5 by actively asking the user using the `AskUserQuestion` tool:
 
-> **Implementation complete. Please test and provide feedback — then we'll continue
-> with the code review.**
+**Question**: "Die Implementierung ist abgeschlossen. Wie möchtest du weitermachen?"
 
-Do NOT proceed to Phase 6 until the user confirms that testing is complete.
+**Options**:
+1. **"Alles passt — Review starten"** — Proceed to Phase 6
+2. **"Ich teste erst manuell"** — Wait for user to come back with test results
+3. **"Es gibt noch offene Punkte"** — User describes what's missing, then address before re-entering Step 3
+
+This active question ensures the user is never left hanging. Do NOT proceed to Phase 6 until the user explicitly chooses to start the review.
 
 ---
 
