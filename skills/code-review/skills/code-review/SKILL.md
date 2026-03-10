@@ -3,7 +3,11 @@ name: code-review
 description: >
   Review code changes against SOLID, Clean Code, DRY, KISS, YAGNI, project patterns,
   security, and performance. Use when the user says "review", "code review",
-  "check the code", "review my changes", or "code-review".
+  "check the code", "überprüfe den Code", "Code prüfen", "review my changes",
+  "code-review", "review <number>" (PR review), or any variation involving
+  reviewing, checking, or auditing code changes. ALWAYS use this skill when the
+  user mentions "review" in the context of code, PRs, or changes — even with
+  just a number like "review 187".
 argument-hint: "[optional: specific focus area or file path]"
 allowed-tools: Read, Glob, Grep, Edit, Write, EnterPlanMode, Bash(git diff*, git log*, git status*, dotnet build*, npm run build*, cargo build*, go build*, make build*)
 ---
