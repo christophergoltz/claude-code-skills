@@ -41,18 +41,35 @@ Skip any repository with no output.
 
 ## Step 2: Analyze Changes
 
-For each repository with changes, run these in parallel:
+For each repository with changes, run these two calls in parallel:
 
-1. **Diff of tracked files** — use `git diff HEAD` to see all changes (staged + unstaged combined).
+1. **Status + recent commits** — combine in one Bash call with a separator:
+   ```bash
+   git status --short && echo '---LOG---' && git log --oneline -5
+   ```
+   This single call delivers:
+   - **Changed files** and their **staging state** (from the two-character status codes)
+   - **Untracked files** (`??` prefix) — read their content with the `Read` tool
+   - **Recent commit style** for consistency
+
+   **Reading `git status --short` codes** (first two characters per line):
+   | Code | Meaning |
+   |------|---------|
+   | `M·` | Staged (index modified) |
+   | `·M` | Unstaged (worktree modified) |
+   | `MM` | Both staged and unstaged changes |
+   | `A·` | Newly staged file |
+   | `??` | Untracked file |
+   | `D·` | Staged deletion |
+   | `·D` | Unstaged deletion |
+
+   *(`·` represents a space character)*
+
+   If any file shows mixed state (`MM`, or some files staged while others are not),
+   flag this in the output (see Step 5).
+
+2. **Diff content** — `git diff HEAD` to see all changes (staged + unstaged combined).
    If nothing is staged yet, `git diff HEAD` may fail — fall back to `git diff`.
-
-2. **Untracked files** — lines starting with `??` in `git status` are new files invisible to `git diff`.
-   Read their content with the `Read` tool to understand what they add.
-
-3. **Recent commits** — `git log --oneline -5` for style consistency.
-
-4. **Staging state** — run `git diff --cached --stat` and `git diff --stat` to check whether
-   files are staged, unstaged, or mixed. If mixed, flag this in the output (see Step 5).
 
 ## Step 3: Ticket Context (Optional)
 
