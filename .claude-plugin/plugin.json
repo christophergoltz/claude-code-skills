@@ -1,0 +1,12 @@
+{
+  "name": "claude-code-skills",
+  "version": "1.0.0",
+  "description": "Curated collection of reusable Claude Code skills for software engineering workflows",
+  "author": {
+    "name": "Christopher Goltz",
+    "url": "https://github.com/christophergoltz"
+  },
+  "repository": "https://github.com/christophergoltz/claude-code-skills",
+  "license": "Apache-2.0",
+  "keywords": ["skills", "workflow", "implementation", "code-review", "planning"]
+}

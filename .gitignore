@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node (falls jemand lokal npm nutzt)
+node_modules/
+
+# Misc
+*.workspace/
+*.log
