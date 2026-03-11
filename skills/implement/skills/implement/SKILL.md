@@ -61,6 +61,19 @@ If IDE tools are not reachable, fall back to build/test commands from CLAUDE.md.
 
 ## Process
 
+### Re-Entry Guard
+
+Before starting Phase 1, check the current conversation history. If this skill was already
+invoked earlier in the same conversation and a plan was created and approved by the user,
+do NOT restart from Phase 1. Instead, pick up where you left off:
+
+- **Plan was approved but implementation hasn't started** → Jump to Phase 4
+- **Implementation is in progress** → Continue with the next sub-task in Phase 4
+- **Implementation is done, testing handoff pending** → Go to Phase 5
+
+This guard exists because the skill may be re-loaded after exiting plan mode. Without it,
+re-loading the skill triggers a new planning cycle, creating an infinite loop.
+
 ### Phase 1: Clarify Objective
 
 **Goal**: Understand WHAT, HOW, and WHERE.
@@ -154,9 +167,12 @@ UI placement, naming, scope boundaries). Use `AskUserQuestion` to resolve them i
 - Provide concrete options with descriptions — always include a recommended option.
 - If there are no open questions (trivial change with a clear path), skip directly to Step 2.
 
-**Step 2: Enter Plan Mode**
+**Step 2: Enter Plan Mode** *(once per conversation — never repeat)*
 
 After all questions are answered, switch to plan mode using `EnterPlanMode`.
+If you have already created and exited plan mode in this conversation, do NOT call
+`EnterPlanMode` again — proceed directly to Phase 4 with the approved plan.
+
 In plan mode, create a detailed implementation plan with:
 
 - Summary of the agreed approach (incorporating all answers from Step 1)
