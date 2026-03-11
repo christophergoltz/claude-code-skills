@@ -1,6 +1,6 @@
 {
   "name": "refine-ticket",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Refine planning tickets to implementation-ready detail with data models, mockups, and validation rules",
   "author": {
     "name": "Christopher Goltz",

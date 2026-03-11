@@ -40,6 +40,7 @@ missing, use `AskUserQuestion` to ask the user to provide it before proceeding.
 | Tech stack & patterns | Recommended | Informed questions about data models, APIs, UI |
 | Repo structure | Recommended | Identifying which areas the ticket affects |
 | Architecture patterns | Recommended | Proactive analysis of missing requirements |
+| Ticket refinement marking | Recommended | How to mark tickets as refined (field name, file format, location) |
 
 ## Important Principles
 
@@ -78,7 +79,7 @@ Evaluate the ticket's current state and determine the refinement approach:
 
 | Condition | Action |
 |-----------|--------|
-| Already refined (marked in frontmatter) | Inform user. Offer to re-refine specific sub-tasks if needed. |
+| Already refined (marked in ticket/overview) | Inform user. Offer to re-refine specific sub-tasks if needed. |
 | Simple ticket (XS/S, no sub-tasks) | **Quick-Check mode**: Validate against quality checklist, ask 1-2 clarifying rounds max. |
 | Epic with placeholder sub-tasks | **Full refinement**: Estimate effort to user ("This epic has {N} sub-tasks to refine. This will take {N} Q&A rounds.") |
 | Epic with partially refined sub-tasks | **Partial refinement**: Only refine sub-tasks that lack detail. Skip already-detailed ones. |
@@ -243,13 +244,24 @@ As a guideline for content per sub-task type:
 3. Incorporate feedback
 4. Write the files only after confirmation
 
-### Step 8: Update Frontmatter
+### Step 8: Mark Ticket as Refined
 
-After writing all sub-task files:
+After writing all sub-task files, mark the ticket as refined so other skills (like `implement`)
+can detect the refinement status.
 
-1. Set `refined: true` in the YAML frontmatter of the overview file
-2. Update `updated: {today's date}` in the frontmatter
-3. Remove any placeholder notes from the overview
+**How to mark depends on the project's conventions:**
+
+1. Check CLAUDE.md for instructions on how tickets are marked as refined (field name, file
+   format, location). The CLAUDE.md Requirements table lists this as "Ticket refinement marking".
+2. If CLAUDE.md specifies a convention → follow it exactly.
+3. If CLAUDE.md has no convention → use `AskUserQuestion` to ask the user how they want
+   refined tickets marked. Provide these options:
+   - Set `refined: true` in YAML frontmatter of the overview file (Recommended)
+   - Add a `## Status: Refined` section to the overview file
+   - No marking needed — skip this step
+
+Additionally, update the ticket's last-modified date if the format supports it, and remove
+any placeholder notes from the overview.
 
 ### Step 9: Quality Checklist
 
